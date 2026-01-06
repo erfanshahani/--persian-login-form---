@@ -1,39 +1,41 @@
-🌐 Persian Login Form | HTML + CSS + JS
-A modern, responsive login form designed with HTML, CSS, and JavaScript, fully localized for Persian (Farsi) users. This project demonstrates a clean UI with gradient background and interactive validation.
-🚀 Technologies Used
+🌐 فرم ورود فارسی | HTML + CSS + JS
+یک فرم ورود مدرن و واکنش‌گرا که با HTML، CSS و JavaScript طراحی شده و کاملاً برای کاربران فارسی‌زبان بومی‌سازی شده است. این پروژه یک رابط کاربری ساده و تمیز با پس‌زمینه گرادیانی و اعتبارسنجی تعاملی را نشان می‌دهد.
+🚀 تکنولوژی‌های استفاده‌شده
 |  |  | 
 |  |  | 
 |  |  | 
 |  |  | 
 
 
-✨ Features
-- Minimal design with gradient background (blue → pink)
-- Centered login form with rounded corners and white background
-- Full Persian language support (RTL layout)
-- Email and password fields with "Forgot password?" option
-- Basic client-side validation using JavaScript
-- Interactive login button with hover effects
-📁 Project Structure
+✨ ویژگی‌ها
+- طراحی مینیمال با پس‌زمینه گرادیانی (آبی → صورتی)
+- فرم ورود وسط صفحه با گوشه‌های گرد و پس‌زمینه سفید
+- پشتیبانی کامل از زبان فارسی (چیدمان راست‌چین)
+- فیلد ایمیل و گذرواژه با گزینه «فراموشی گذرواژه؟»
+- اعتبارسنجی ساده سمت کاربر با جاوااسکریپت
+- دکمه ورود با افکت‌های تعاملی
+📁 ساختار پروژه
 project01/
-├── index.html       # Main HTML file
-├── style.css        # CSS styling
-├── script.js        # JavaScript validation & interactions
-└── assets/          # Images, fonts, or other resources
+├── index.html       # فایل اصلی HTML
+├── style.css        # فایل استایل CSS
+├── script.js        # اعتبارسنجی و تعاملات جاوااسکریپت
+└── assets/          # تصاویر، فونت‌ها و منابع جانبی
 
 
-🧪 Form Validation
-JavaScript ensures:
-- Email field is not empty and follows a valid format
-- Password field is not empty
-- Error messages are displayed for invalid inputs
-📱 Responsive Design
-The form is fully responsive and adapts to different screen sizes (mobile, tablet, desktop).
-🔮 Future Improvements
-- Connect to backend API for real authentication
-- Add registration and password recovery forms
-- Use localStorage or sessionStorage for user data handling
-👨‍💻 Developer
-- Name: Erfan
-- Location: Mashhad, Iran
-- Interests: Modern UI design, localization, and web app development
+🧪 اعتبارسنجی فرم
+جاوااسکریپت بررسی می‌کند:
+- فیلد ایمیل خالی نباشد و فرمت معتبر داشته باشد
+- فیلد گذرواژه خالی نباشد
+- در صورت خطا پیام مناسب نمایش داده شود
+📱 طراحی واکنش‌گرا
+فرم به‌طور کامل واکنش‌گراست و در موبایل، تبلت و دسکتاپ به‌خوبی نمایش داده می‌شود.
+🔮 بهبودهای آینده
+- اتصال به بک‌اند برای احراز هویت واقعی
+- افزودن فرم ثبت‌نام و بازیابی رمز عبور
+- استفاده از localStorage یا sessionStorage برای مدیریت داده‌های کاربر
+👨‍💻 توسعه‌دهنده
+- نام: عرفان
+- موقعیت: مشهد، ایران
+- علاقه‌مندی‌ها: طراحی رابط کاربری مدرن، بومی‌سازی و توسعه وب‌اپلیکیشن‌ها
+
+
