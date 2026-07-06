@@ -1,61 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فرم شیک ورود و ثبت‌نام</title>
+
+    <title>Modern Login & Register</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Toastify -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="stylesheet" href="style.css">
+
+</head>
+
 <body>
-    <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>ایجاد حساب کاربری</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-google"></i></a>
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-github"></i></a>
-                </div>
-                <span>یا از ایمیل برای ثبت‌نام استفاده کنید</span>
-                <input type="text" placeholder="نام و نام خانوادگی" required />
-                <input type="email" placeholder="ایمیل" required />
-                <input type="password" placeholder="گذرواژه" required />
-                <button>ثبت‌نام</button>
-            </form>
-        </div>
+
+<button id="themeBtn" class="theme-btn">
+    <i class="fa-solid fa-moon"></i>
+</button>
+
+<div class="container" id="container">
+
+    <!-- Register -->
+
+    <div class="form-container sign-up-container">
+
+        <form id="registerForm">
+
+            <h1>ایجاد حساب کاربری</h1>
+
+            <div class="social-container">
+
+                <a href="#" class="social">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <a href="#" class="social">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="social">
+                    <i class="fab fa-github"></i>
+                </a>
+
+            </div>
+
+            <span>یا با ایمیل ثبت نام کنید</span>
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    placeholder="نام و نام خانوادگی"
+                >
+
+            </div>
+
+            <small class="error" id="nameError"></small>
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="ایمیل"
+                >
+
+            </div>
+
+            <small class="error" id="registerEmailError"></small>
+
+            <div class="input-group password-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="گذرواژه"
+                >
+
+                <i
+                    class="fa-solid fa-eye togglePassword"
+                    data-target="registerPassword"
+                ></i>
+
+            </div>
+
+            <small class="error" id="registerPasswordError"></small>
+
+            <button id="registerBtn">
+
+                <span>ثبت نام</span>
+
+            </button>
+
+        </form>
+
+    </div>
+        <!-- Login -->
 
         <div class="form-container sign-in-container">
-            <form action="#">
+
+            <form id="loginForm">
+    
                 <h1>ورود به حساب</h1>
+    
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-google"></i></a>
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-github"></i></a>
+    
+                    <a href="#" class="social">
+                        <i class="fab fa-google"></i>
+                    </a>
+    
+                    <a href="#" class="social">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+    
+                    <a href="#" class="social">
+                        <i class="fab fa-github"></i>
+                    </a>
+    
                 </div>
+    
                 <span>یا از حساب کاربری خود استفاده کنید</span>
-                <input type="email" placeholder="ایمیل" required />
-                <input type="password" placeholder="گذرواژه" required />
-                <a href="#">فراموشی گذرواژه؟</a>
-                <button>ورود</button>
+    
+                <div class="input-group">
+    
+                    <i class="fa-solid fa-envelope"></i>
+    
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="ایمیل"
+                    >
+    
+                </div>
+    
+                <small
+                    class="error"
+                    id="loginEmailError"
+                ></small>
+    
+                <div class="input-group password-box">
+    
+                    <i class="fa-solid fa-lock"></i>
+    
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="گذرواژه"
+                    >
+    
+                    <i
+                        class="fa-solid fa-eye togglePassword"
+                        data-target="loginPassword"
+                    ></i>
+    
+                </div>
+    
+                <small
+                    class="error"
+                    id="loginPasswordError"
+                ></small>
+    
+                <div class="options">
+    
+                    <label>
+    
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+    
+                        مرا به خاطر بسپار
+    
+                    </label>
+    
+                    <a href="#">
+                        فراموشی گذرواژه؟
+                    </a>
+    
+                </div>
+    
+                <button id="loginBtn">
+    
+                    <span id="loginBtnText">
+    
+                        ورود
+    
+                    </span>
+    
+                </button>
+    
             </form>
+    
         </div>
-
+    
+        <!-- Overlay -->
+    
         <div class="overlay-container">
+    
             <div class="overlay">
+    
                 <div class="overlay-panel overlay-left">
-                    <h1>خوش برگشتید!</h1>
-                    <p>برای حفظ ارتباط، با اطلاعات شخصی خود وارد شوید.</p>
-                    <button class="ghost" id="signIn">ورود</button>
+    
+                    <h1>خوش برگشتید 👋</h1>
+    
+                    <p>
+    
+                        برای ادامه وارد حساب کاربری خود شوید.
+    
+                    </p>
+    
+                    <button
+                        class="ghost"
+                        id="signIn"
+                    >
+    
+                        ورود
+    
+                    </button>
+    
                 </div>
-                
+    
                 <div class="overlay-panel overlay-right">
-                    <h1>سلام دوست عزیز!</h1>
-                    <p>با وارد کردن جزئیات خود، سفر را با ما شروع کنید.</p>
-                    <button class="ghost" id="signUp">ثبت‌نام</button>
+    
+                    <h1>سلام دوست عزیز ❤️</h1>
+    
+                    <p>
+    
+                        با ایجاد حساب کاربری تجربه خود را آغاز کنید.
+    
+                    </p>
+    
+                    <button
+                        class="ghost"
+                        id="signUp"
+                    >
+    
+                        ثبت نام
+    
+                    </button>
+    
                 </div>
+    
             </div>
+    
         </div>
+    
     </div>
+    <!-- Toastify -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-    <script src="./script.js"></script>
+<!-- Loader -->
+<div id="loader" class="loader hidden">
+    <div class="spinner"></div>
+    <p>در حال پردازش...</p>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

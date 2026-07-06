@@ -242,3 +242,420 @@ button:active {
 .container.right-panel-active .overlay-right {
     transform: translateX(20%); /* یا 100% که کاملا مخفی شود */
 }
+/* ---------- Professional Features ---------- */
+
+.theme-btn{
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:none;
+    background:#fff;
+    color:#333;
+    cursor:pointer;
+    font-size:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    z-index:999;
+    transition:.3s;
+}
+
+.theme-btn:hover{
+    transform:rotate(180deg);
+}
+
+body.dark{
+    --bg-light:#222;
+    --text-dark:#fff;
+    background:linear-gradient(135deg,#141E30,#243B55);
+}
+
+.input-group{
+    position:relative;
+    width:100%;
+    margin:8px 0;
+}
+
+.input-group input{
+    width:100%;
+    padding:13px 45px 13px 15px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.input-group input:focus{
+    outline:none;
+    border:2px solid var(--primary-color);
+    box-shadow:0 0 10px rgba(63,81,181,.25);
+}
+
+.input-group i:first-child{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#777;
+}
+
+.password-box .togglePassword{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#777;
+    transition:.3s;
+}
+
+.password-box .togglePassword:hover{
+    color:var(--primary-color);
+}
+
+.error{
+    width:100%;
+    color:#e53935;
+    text-align:right;
+    font-size:12px;
+    margin-top:-5px;
+    margin-bottom:5px;
+    min-height:16px;
+}
+
+.options{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:10px;
+    font-size:13px;
+}
+
+.options label{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+}
+/* ---------- Buttons ---------- */
+
+button{
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* ---------- Loader ---------- */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader.hidden{
+    display:none;
+}
+
+.spinner{
+    width:65px;
+    height:65px;
+    border:6px solid rgba(255,255,255,.3);
+    border-top:6px solid #fff;
+    border-radius:50%;
+    animation:spin .8s linear infinite;
+}
+
+.loader p{
+    color:#fff;
+    margin-top:20px;
+    font-size:16px;
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+form{
+
+    animation:fadeUp .6s ease;
+
+}
+
+/* ---------- Social Icons ---------- */
+
+.social{
+
+    transition:.3s;
+
+}
+
+.social:hover{
+
+    transform:translateY(-5px) scale(1.08);
+
+    background:var(--primary-color);
+
+    color:#fff;
+
+}
+
+/* ---------- Input Hover ---------- */
+
+input:hover{
+
+    background:#f0f3ff;
+
+}
+
+/* ---------- Dark Mode ---------- */
+
+body.dark .container{
+
+    background:#2d2d2d;
+
+}
+
+body.dark form{
+
+    background:#2d2d2d;
+
+}
+
+body.dark input{
+
+    background:#3b3b3b;
+
+    color:#fff;
+
+}
+
+body.dark span,
+body.dark h1,
+body.dark a{
+
+    color:#fff;
+
+}
+
+body.dark .social{
+
+    border-color:#666;
+
+}
+
+body.dark .theme-btn{
+
+    background:#333;
+
+    color:#fff;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:768px){
+
+    .container{
+
+        width:95%;
+
+        min-height:760px;
+
+    }
+
+    .form-container{
+
+        width:100%;
+
+    }
+
+    .overlay-container{
+
+        display:none;
+
+    }
+
+    .sign-in-container,
+    .sign-up-container{
+
+        width:100%;
+        transform:none !important;
+        opacity:1;
+        position:relative;
+
+    }
+
+    .sign-up-container{
+
+        display:none;
+
+    }
+
+    .container.right-panel-active .sign-up-container{
+
+        display:block;
+
+    }
+
+    .container.right-panel-active .sign-in-container{
+
+        display:none;
+
+    }
+
+}
+/* ===============================
+   Toastify Custom Style
+================================ */
+
+.toastify{
+    border-radius:12px !important;
+    font-family:Tahoma,sans-serif !important;
+    font-size:14px !important;
+    box-shadow:0 8px 25px rgba(0,0,0,.25) !important;
+}
+
+/* ===============================
+   Loading Button
+================================ */
+
+button.loading{
+
+    pointer-events:none;
+
+    opacity:.8;
+
+}
+
+button.loading span{
+
+    display:none;
+
+}
+
+button.loading::after{
+
+    content:"";
+
+    width:18px;
+    height:18px;
+
+    border:3px solid rgba(255,255,255,.4);
+    border-top:3px solid #fff;
+
+    border-radius:50%;
+
+    display:inline-block;
+
+    animation:spin .8s linear infinite;
+
+}
+
+/* ===============================
+   Success Animation
+================================ */
+
+.success{
+
+    animation:success .5s ease;
+
+}
+
+@keyframes success{
+
+    0%{
+
+        transform:scale(.9);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ===============================
+   Better Scroll
+================================ */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary-color);
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eee;
+
+}
+
+/* ===============================
+   Selection
+================================ */
+
+::selection{
+
+    background:var(--secondary-color);
+
+    color:#fff;
+
+}
